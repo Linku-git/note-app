@@ -1,0 +1,240 @@
+
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --success: #00c9a7;
+            --danger: #ff6b6b;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: none;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: var(--gradient);
+            color: white;
+            font-weight: 700;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+            border-bottom: none;
+        }
+        
+        .card-body {
+            padding: 30px;
+        }
+        
+        .logo {
+            background: white;
+            border-radius: 15px;
+            padding: 15px 25px;
+            margin-bottom: 25px;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn {
+            border-radius: 50px;
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+        
+        .btn-selected {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.3);
+        }
+        
+        .option-btn {
+            width: 100%;
+            margin: 8px 0;
+            text-align: left;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            background: white;
+            border: 2px solid #e9ecef;
+        }
+        
+        .option-btn:hover {
+            background: #f8f9fa;
+            border-color: var(--primary);
+        }
+        
+        .option-btn.correct {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        
+        .option-btn.incorrect {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .quiz-header div {
+            display: flex;
+            align-items: center;
+        }
+        
+        .timer {
+            background: var(--danger);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .score {
+            background: var(--success);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .question-text {
+            font-size: 1.4rem;
+            margin: 25px 0;
+            line-height: 1.5;
+            color: var(--dark);
+        }
+        
+        #next {
+            width: 100%;
+            max-width: 200px;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .results-container {
+            text-align: center;
+        }
+        
+        .result-badge {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 50px;
+            margin: 10px 0;
+        }
+        
+        .good-message {
+            color: var(--success);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .bad-message {
+            color: var(--danger);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        
+        .difficulty-easy { color: #28a745; }
+        .difficulty-medium { color: #ffc107; }
+        .difficulty-hard { color: #dc3545; }
+        
+        .progress-container {
+            margin: 20px 0;
+        }
+        
+        .progress-bar {
+            height: 12px;
+            border-radius: 10px;
+        }
+        
+        .difficulty-selector, .num-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .difficulty-selector .btn, .num-selector .btn {
+            min-width: 80px;
+        }
+        
+        @media (max-width: 576px) {
+            .card-body {
+                padding: 20px;
+            }
+            
+            .question-text {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
