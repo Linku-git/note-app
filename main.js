@@ -46,8 +46,6 @@ const questions = {
         {question: "How many continents are there?", options: ["5", "6", "7", "8"], correct: 2},
         {question: "Which fruit is known as the King of Fruits?", options: ["Apple", "Banana", "Mango", "Orange"], correct: 2},
         {question: "Which planet is closest to the Sun?", options: ["Mercury", "Venus", "Earth", "Mars"], correct: 0},
-        {question: "What is the tallest animal?", options: ["Elephant", "Horse", "Giraffe", "Kangaroo"], correct: 2},
-        {question: "What is the capital of Spain?", options: ["Madrid", "Barcelona", "Valencia", "Seville"], correct: 0},
         {question: "Which shape has three sides?", options: ["Square", "Triangle", "Rectangle", "Pentagon"], correct: 1}
     ],
     medium: [
